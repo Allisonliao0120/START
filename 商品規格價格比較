@@ -1,0 +1,19 @@
+#在不同商店看到不同包裝容量的相同商品，可以快速比較出何者較便宜
+
+unit = input("請輸入比較單位(ex.公克、包)")
+x_ammount = int(input("請輸入商品A的"+unit+"數:"))
+x_price = int(input("請入商品A的金額:"))
+y_ammount = int(input("請輸入商品B的"+unit+"數:"))
+y_price = int(input("請入商品B的金額:"))
+
+result1 = "商品A每1"+unit+str(x_price/x_ammount)+"元"
+result2 = "商品B每1"+unit+str(y_price/y_ammount)+"元"
+
+print(result1,result2)
+
+if x_price/x_ammount < y_price/y_ammount:
+    print("商品A比較便宜")
+elif x_price/x_ammount > y_price/y_ammount:
+    print("商品B比較便宜")
+else:
+    print("兩者一樣便宜")
