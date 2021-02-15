@@ -1,0 +1,67 @@
+#此題來自HackerRank String validators
+#依序檢查一字串s中是否包含英數、英文字母、數字、小寫字母、大寫字母，依序列出True或F
+
+if __name__ == '__main__':
+    s = input()
+    # 解法1：預設都是False，一旦發現True就更改
+    a,b,c,d,e=False,False,False,False,False
+    for i in s:
+        if i.isalnum():
+            a=True
+        if i.isalpha():
+            b=True
+        if i.isdigit():
+            c=True
+        if i.islower():
+            d=True
+        if i.isupper():
+            e=True
+    print(a)
+    print(b)
+    print(c)
+    print(d)
+    print(e)
+    
+    #解法2：用內建函數any
+    # print (any(c.isalnum() for c in s))
+    # print (any(c.isalpha() for c in s))
+    # print (any(c.isdigit() for c in s))
+    # print (any(c.islower() for c in s))
+    # print (any(c.isupper() for c in s))
+    
+    #偶自己的解法：會依序落入True或False，就無法再更改且會都印出，因此要改為解法1才行
+    # for t in s:
+    #     if t.isalnum():
+    #         print('True')
+    #         break
+    #     else:
+    #         print('False')
+        
+    # for t in s: 
+    #     if t.isalpha():
+    #         print('True')
+    #         break
+    #     else:
+    #         print('False')
+            
+    # for t in s: 
+    #     if t.isdigit():
+    #         print('True')
+    #         break
+    #     else:
+    #         print('False')
+            
+    # for t in s: 
+    #     if t.islower():
+    #         print('True')
+    #         break
+    #     else:
+    #         print('False')
+            
+    # for t in s: 
+    #     if t.isupper():
+    #         print('True')
+    #         break
+    #     else:
+    #         print('False')
+            
