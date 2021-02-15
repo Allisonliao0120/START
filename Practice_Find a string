@@ -1,0 +1,11 @@
+#此題來自HackerRank Find a String
+#計算sub_string出現在String中的次數
+#例如String=ABCDCDC，sub=CDC，輸出=2
+#關鍵：startswith的使用：Python startswith()用于检查字符串是否是以指定子字符串开头，如果是则返回 True，否则返回 False
+
+def count_substring(string, sub_string):
+    count = 0
+    for i in range(len(string)):
+        if string[i:].startswith(sub_string):
+            count += 1
+    return count
