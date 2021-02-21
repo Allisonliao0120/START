@@ -1,0 +1,26 @@
+HackerRank題目
+給x,y,z,n 列出可能的[i,j,k] 各自不大於x,y,z 且i+j+k不等於n
+
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    
+    print ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1) if a + b + c != n ])
+    
+    答案範例:[[0, 0, 0], [0, 0, 1], [0, 1, 0], [1, 0, 0], [1, 1, 1]]
+    
+    這個寫法很簡潔，可以學    
+    
+    我原本的寫法：
+    答案正確但自動換行，無法以逗點連接
+    continue表示(條件成立時)直接跳過其下方的程式，不執行
+    
+    # for i in range(0,x+1):
+    #    for j in range(0,y+1):
+    #         for k in range(0,z+1):
+    #             if i+j+k == n:
+    #                 continue
+    #             print([i,j,k])
+    
+    
